@@ -711,17 +711,11 @@ class StyledText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width:
-          style.display == Display.BLOCK || style.display == Display.LIST_ITEM
-              ? double.infinity
-              : null,
-      child: Text.rich(
-        textSpan,
-        style: style.generateTextStyle(),
-        textAlign: style.textAlign,
-        textDirection: style.direction,
-      ),
+    return Text.rich(
+      textSpan,
+      style: style.generateTextStyle(),
+      textAlign: style.textAlign,
+      textDirection: style.direction,
     );
   }
 }
